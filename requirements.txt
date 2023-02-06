@@ -45,7 +45,6 @@ Pillow==8.0.1
 pipenv==2020.11.15
 proglog==0.1.9
 prompt-toolkit==3.0.8
-PyAudio @ file:///C:/Users/ASUS/Downloads/PyAudio-0.2.11-cp39-cp39-win_amd64.whl
 Pygments==2.7.2
 pylint==2.6.0
 python-dateutil==2.8.1
