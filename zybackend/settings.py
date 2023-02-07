@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&+qm0&(js5=u5-@v2g15r*uu5&cow73u8oa*e5c=dyi7w(@5fb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app','localhost']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'provider.apps.ProviderConfig'
 ]
 
 MIDDLEWARE = [
@@ -74,10 +75,17 @@ WSGI_APPLICATION = 'zybackend.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+     'default': {
+        'ENGINE': 'django_cockroachdb',
+        'NAME': 'defaultdb',
+        'USER': 'zawye_admin',
+        'PASSWORD': 'TBdltygHPo_WQ0oE9O6-7A',
+        'HOST': 'safe-herring-4093.8nk.cockroachlabs.cloud',
+        'PORT': '26257',
+        'OPTIONS': {
+            'sslmode': 'verify-full'
+        },
+    },
 }
 
 

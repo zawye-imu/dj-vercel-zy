@@ -4,3 +4,5 @@ python-dateutil==2.8.1
 six==1.15.0
 sqlparse==0.4.1
 tzdata==2022.7
+psycopg2-binary
+django-cockroachdb==4.1
