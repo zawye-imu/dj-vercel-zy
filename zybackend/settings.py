@@ -83,7 +83,7 @@ DATABASES = {
         'HOST': 'basic-penguin-8862.7tt.cockroachlabs.cloud',
         'PORT': '26257',
         'OPTIONS': {
-            'sslmode': 'disable'
+            'sslmode': 'verify-full'
         },
     },
 }
