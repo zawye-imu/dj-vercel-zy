@@ -78,9 +78,9 @@ DATABASES = {
      'default': {
         'ENGINE': 'django_cockroachdb',
         'NAME': 'defaultdb',
-        'USER': 'zawye_admin',
-        'PASSWORD': 'TBdltygHPo_WQ0oE9O6-7A',
-        'HOST': 'safe-herring-4093.8nk.cockroachlabs.cloud',
+        'USER': 'vercel',
+        'PASSWORD': 'j5HU6omkr8JlYHzfmy2ttw',
+        'HOST': 'basic-penguin-8862.7tt.cockroachlabs.cloud',
         'PORT': '26257',
         'OPTIONS': {
             'sslmode': 'verify-full'
