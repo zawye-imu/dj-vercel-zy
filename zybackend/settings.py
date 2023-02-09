@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -74,19 +76,22 @@ WSGI_APPLICATION = 'zybackend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#      'default': {
+#         'ENGINE': 'django_cockroachdb',
+#         'NAME': 'defaultdb',
+#         'USER': 'vercel',
+#         'PASSWORD': 'j5HU6omkr8JlYHzfmy2ttw',
+#         'HOST': 'basic-penguin-8862.7tt.cockroachlabs.cloud',
+#         'PORT': '26257',
+#         'OPTIONS': {
+#             'sslmode': 'verify-full'
+#         },
+#     },
+# }
 DATABASES = {
-     'default': {
-        'ENGINE': 'django_cockroachdb',
-        'NAME': 'defaultdb',
-        'USER': 'vercel',
-        'PASSWORD': 'j5HU6omkr8JlYHzfmy2ttw',
-        'HOST': 'basic-penguin-8862.7tt.cockroachlabs.cloud',
-        'PORT': '26257',
-        'OPTIONS': {
-            'sslmode': 'verify-full'
-        },
-    },
-}
+    'default': dj_database_url.config(default=os.environ['DATABASE_URL'], 
+    engine='django_cockroachdb')}
 
 
 # Password validation
